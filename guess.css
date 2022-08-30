@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+body {
+  background-color: rgb(36, 34, 34);
+  font-family: 'Press Start 2P', sans-serif;
+}
+.line {
+  flex: 1;
+  background-color: rgb(255, 248, 248);
+  height: 1vh;
+  opacity: .9;
+}
+.try-again {
+  font-size: 10px;
+}
+.middle {
+  height: 18vh;
+  width: 18vw;
+  font-size: 50px;
+}
+.input {
+  height: 110px;
+  width: 250px;
+  font-size: 50px;
+  background-color: rgb(36, 34, 34);
+}
+.title {
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 7vh;
+  margin-top: 5vh;
+}
+.check-button {
+  margin-left: 8vw;
+  height: 10vh;
+  font-size: 20px;
+}
+.bigger{
+    font-size: 22px;
+}
+.norm{
+    font-size: 20px;
+}
+.sub-div{
+    margin-top: 10vh;
+}
+@media screen and (min-width: 600px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .try-again {
+    font-size: 18px;
+    width: 170px;
+    height: 7vh;
+    border: none;
+  }
+  .middle {
+    height: 13vh;
+    width: 150px;
+    font-size: 60px;
+  }
+  .header>h6{
+    margin-top: 0;
+  }
+  .column{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10vh;
+  }
+  .left{
+    flex-direction: column;
+    margin-right: 20vw;
+  }
+  .input {
+    height: 100px;
+  }
+  .check-button{
+    width: 190px;
+    height:7vh ;
+    margin-right: 5vw;
+  }
+}
+/* 
+check the font,margin-top at header>h6
+*/
