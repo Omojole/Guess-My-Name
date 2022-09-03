@@ -17,7 +17,7 @@
     <div class="container-fluid vh-100">
       <header>
         <div class="mt-4 header">
-          <button class="btn btn-light ms-3 try-again">Again!</button>
+          <button class="btn btn-light ms-3 again">Again!</button>
           <h6 class="text-light ">(Between 1 and 20)</h6>
         </div>
         <h1 class="d-flex justify-content-center text-light title">
@@ -27,7 +27,7 @@
       <main class="d-flex align-items-center">
         <div class="line d-flex"></div>
         <div
-          class="bg-light d-flex justify-content-center align-items-center middle"
+          class="bg-light d-flex justify-content-center align-items-center number"
         >
           ?
         </div>
@@ -35,18 +35,19 @@
       </main>
       <main class="mb-5 justify-content-center column">
         <div class="text-light mt-5">
-          <p class="bigger">Start guessing...</p>
+          <p class="message">Start guessing...</p>
           <div class="sub-div">
-            <p class="norm">💯 Score: 20</p>
-            <p class="mt-4 norm">🥇 Highscore:0</p>
+            <p class="norm">💯 Score: <span class="score">20</span> </p>
+            <p class="mt-4 norm">🥇 Highscore: <span class="highscore">0</span></p>
           </div>
         </div>
         <div class="d-flex mt-5 align-items-center left">
-          <input type="number" class="text-light border border-4   input" />
+          <input type="number" class="text-light border border-4 input" />
           <br />
           <button class="btn btn-light mt-3 test-dark check-button">Check!</button>
         </div>
       </main>
     </div>
+    <script src="guess.js"></script>
   </body>
 </html>
