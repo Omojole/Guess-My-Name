@@ -3,56 +3,54 @@ let score = 20;
 let highscore = 0;
 let number = Math.trunc(Math.random() * 20) + 1;
 console.log(number);
+const message = function (message) {
+  document.querySelector(".message").textContent = message;
+};
 document.querySelector(".check-button").addEventListener("click", function () {
   const input = Number(document.querySelector(".input").value);
   console.log(typeof input);
   if (!input) {
-    document.querySelector(".message").textContent = "⛔ No Number";
+    message("⛔ No Number");
   } else if (input === number) {
-    document.querySelector(".message").textContent = "Correct answer💃🏻🎉💃🏻";
+    message("Correct answer💃🏻🎉💃🏻");
     document.querySelector(".number").textContent = number;
     document.querySelector(".number").style.width = "25vw";
     document.querySelector("body").style.backgroundColor = "#60b347";
-    document.querySelector(".input").style.backgroundColor = "#60b347";
+    document.querySelector(".input").style.display = "none";
+    document.querySelector(".check-button").style.display = "none";
 
     if (score > highscore) {
       highscore = score;
       document.querySelector(".highscore").textContent = score;
     }
-  } else if (input > number) {
+  } else if (input !== number) {
     if (score > 1) {
-      document.querySelector(".message").textContent = "Too High📈";
+      message(input > number ? "Too High📈" : "Too low📉");
       score--;
       document.querySelector(".score").textContent = score;
     } else {
-      document.querySelector(".message").textContent = "You Lost💣";
-    }
-  } else if (input < number) {
-    if (score > 1) {
-      document.querySelector(".message").textContent = "Too low📉";
-      score--;
-      document.querySelector(".score").textContent = score;
-    } else {
-      document.querySelector(".message").textContent = "You Lost💣";
+      message("You Lost the Game💣");
+      document.querySelector(".score").textContent = "0";
+      document.querySelector(".input").style.display = "none";
+      document.querySelector(".check-button").style.display = "none";
+      document.querySelector(".answer").style.display = "flex";
+      document.querySelector(".answer").style.justifyContent = "center";
+      document.querySelector(".number").textContent = number;
     }
   }
 });
 
 document.querySelector(".again").addEventListener("click", function () {
+  score = 20;
   number = Math.trunc(Math.random() * 20) + 1;
   console.log(number);
-  document.querySelector(".message").textContent = "Start guessing...";
+  message("Start guessing...");
   document.querySelector(".number").textContent = "?";
   document.querySelector(".input").value = "";
-
-  document.querySelector(".score").textContent = 20;
+  document.querySelector(".score").textContent = score;
   document.querySelector(".number").style.width = "18vw";
   document.querySelector("body").style.backgroundColor = "rgb(36, 34, 34)";
-  document.querySelector(".input").style.backgroundColor = "rgb(36, 34, 34)";
+  document.querySelector(".input").style.display = "flex";
+  document.querySelector(".check-button").style.display = "flex";
+  document.querySelector(".check-button").style.justifyContent = "center";
 });
-
-/*1)how to debug!!!!!!!
-2)once it gets the answer,stop execution.
-3)once it gets to 0,stop execution.
-4)why is 1 added to the scores to be included
-*/

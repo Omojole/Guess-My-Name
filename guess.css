@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 body {
   background-color: rgb(36, 34, 34);
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: "Press Start 2P", sans-serif;
 }
 .line {
   flex: 1;
   background-color: rgb(255, 248, 248);
   height: 1vh;
-  opacity: .9;
+  opacity: 0.9;
 }
 .again {
   font-size: 10px;
 }
-.number{
+.number {
   height: 18vh;
   width: 18vw;
   font-size: 50px;
@@ -35,20 +35,23 @@ body {
   height: 10vh;
   font-size: 20px;
 }
-.message{
-    font-size: 18px;
+.message {
+  font-size: 18px;
 }
-.norm{
-    font-size: 20px;
+.answer {
+  display: none;
 }
-.header>h6{
+.norm {
+  font-size: 20px;
+}
+.header > h6 {
   margin-top: 7px;
 }
-.left{
+.left {
   flex-direction: column;
 }
-.sub-div{
-    margin-top: 10vh;
+.sub-div {
+  margin-top: 10vh;
 }
 @media screen and (min-width: 600px) {
   .header {
@@ -66,24 +69,24 @@ body {
     width: 150px;
     font-size: 60px;
   }
-  .header>h6{
+  .header > h6 {
     margin-top: 0;
   }
-  .column{
+  .column {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 10vh;
   }
-  .left{
+  .left {
     flex-direction: column;
     margin-right: 20vw;
   }
   .input {
     height: 100px;
   }
-  .check-button{
+  .check-button {
     width: 190px;
-    height:7vh ;
+    height: 7vh;
     margin-right: 5vw;
   }
 }
