@@ -53,4 +53,9 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".input").style.display = "flex";
   document.querySelector(".check-button").style.display = "flex";
   document.querySelector(".check-button").style.justifyContent = "center";
+  document.querySelector(".answer").style.display = "none";
+
 });
+/*
+using enter activates the click button.
+*/
