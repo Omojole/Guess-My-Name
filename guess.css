@@ -12,6 +12,9 @@ body {
 .again {
   font-size: 10px;
 }
+.again:hover {
+  transform: scaleX(1.1);
+}
 .number {
   height: 18vh;
   width: 18vw;
@@ -34,6 +37,10 @@ body {
   margin-left: 8vw;
   height: 10vh;
   font-size: 20px;
+}
+.check-button:hover{
+  transform: scaleX(1.1);
+
 }
 .message {
   font-size: 18px;

@@ -6,18 +6,21 @@ console.log(number);
 const message = function (message) {
   document.querySelector(".message").textContent = message;
 };
-document.querySelector(".check-button").addEventListener("click", function () {
+const selectNumber = document.querySelector(".number");
+const checkBtn = document.querySelector(".check-button");
+const inputNumber = document.querySelector(".input");
+checkBtn.addEventListener("click", function () {
   const input = Number(document.querySelector(".input").value);
   console.log(typeof input);
   if (!input) {
     message("⛔ No Number");
   } else if (input === number) {
     message("Correct answer💃🏻🎉💃🏻");
-    document.querySelector(".number").textContent = number;
-    document.querySelector(".number").style.width = "25vw";
+    selectNumber.textContent = number;
+    selectNumber.style.width = "25vw";
     document.querySelector("body").style.backgroundColor = "#60b347";
-    document.querySelector(".input").style.display = "none";
-    document.querySelector(".check-button").style.display = "none";
+    inputNumber.style.display = "none";
+    checkBtn.style.display = "none";
 
     if (score > highscore) {
       highscore = score;
@@ -31,11 +34,11 @@ document.querySelector(".check-button").addEventListener("click", function () {
     } else {
       message("You Lost the Game💣");
       document.querySelector(".score").textContent = "0";
-      document.querySelector(".input").style.display = "none";
-      document.querySelector(".check-button").style.display = "none";
+      inputNumber.style.display = "none";
+      checkBtn.style.display = "none";
       document.querySelector(".answer").style.display = "flex";
       document.querySelector(".answer").style.justifyContent = "center";
-      document.querySelector(".number").textContent = number;
+      selectNumber.textContent = number;
     }
   }
 });
@@ -45,17 +48,21 @@ document.querySelector(".again").addEventListener("click", function () {
   number = Math.trunc(Math.random() * 20) + 1;
   console.log(number);
   message("Start guessing...");
-  document.querySelector(".number").textContent = "?";
-  document.querySelector(".input").value = "";
+  selectNumber.textContent = "?";
+  inputNumber.value = "";
   document.querySelector(".score").textContent = score;
-  document.querySelector(".number").style.width = "18vw";
+  selectNumber.style.width = "18vw";
   document.querySelector("body").style.backgroundColor = "rgb(36, 34, 34)";
-  document.querySelector(".input").style.display = "flex";
-  document.querySelector(".check-button").style.display = "flex";
-  document.querySelector(".check-button").style.justifyContent = "center";
+  inputNumber.style.display = "flex";
+  checkBtn.style.display = "flex";
+  checkBtn.style.justifyContent = "center";
   document.querySelector(".answer").style.display = "none";
-
 });
 /*
+document.addEventListener('keydown',function(i){
+  if(i===Enter){
+
+}})
 using enter activates the click button.
+using add and remkve classes instead of styles
 */
