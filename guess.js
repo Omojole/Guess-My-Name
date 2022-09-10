@@ -2,16 +2,17 @@
 let score = 20;
 let highscore = 0;
 let number = Math.trunc(Math.random() * 20) + 1;
-console.log(number);
+
 const message = function (message) {
   document.querySelector(".message").textContent = message;
 };
 const selectNumber = document.querySelector(".number");
 const checkBtn = document.querySelector(".check-button");
 const inputNumber = document.querySelector(".input");
-checkBtn.addEventListener("click", function () {
+
+//defining the check-btn function
+const check = function () {
   const input = Number(document.querySelector(".input").value);
-  console.log(typeof input);
   if (!input) {
     message("⛔ No Number");
   } else if (input === number) {
@@ -41,6 +42,9 @@ checkBtn.addEventListener("click", function () {
       selectNumber.textContent = number;
     }
   }
+};
+checkBtn.addEventListener("click", function () {
+  check();
 });
 
 document.querySelector(".again").addEventListener("click", function () {
@@ -58,11 +62,11 @@ document.querySelector(".again").addEventListener("click", function () {
   checkBtn.style.justifyContent = "center";
   document.querySelector(".answer").style.display = "none";
 });
-/*
-document.addEventListener('keydown',function(i){
-  if(i===Enter){
 
-}})
-using enter activates the click button.
-using add and remkve classes instead of styles
+document.addEventListener('keydown', function (i) {
+  if(i.key==='Enter'){
+  check()
+}});
+/*
+using add and remove classes instead of styles....use comments...define varriables and assign them
 */
