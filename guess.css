@@ -51,6 +51,12 @@ body {
 .norm {
   font-size: 20px;
 }
+.hidden{
+  display: none;
+}
+.show{
+  display: flex;
+}
 .header > h6 {
   margin-top: 7px;
 }
